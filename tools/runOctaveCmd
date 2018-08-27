@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ "$#" -lt 1 ]
 then
   echo "Usage: $0 function_name arg1 arg2 ..."
@@ -19,4 +20,4 @@ do
 done
 
 echo Running: octave "$octavefunc($arglist)"
-echo " $octavefunc($arglist); exit" | octave --no-gui
+echo "$octavefunc($arglist); exit" | octave --no-gui
